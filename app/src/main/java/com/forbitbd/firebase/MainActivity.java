@@ -1,5 +1,7 @@
 package com.forbitbd.firebase;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -44,7 +46,12 @@ public class MainActivity extends AppCompatActivity {
                     userList.add(user);
                 }
 
-                adapter=new UserAdapter(getApplicationContext(),userList);
+                adapter=new UserAdapter(getApplicationContext(), userList, new ItemClickListener() {
+                    @Override
+                    public void OnItemClick(User user) {
+                        dialcall(user.getPhone());
+                    }
+                });
                 recyclerView.setAdapter(adapter);
 
             }
@@ -81,6 +88,13 @@ public class MainActivity extends AppCompatActivity {
 //
 //            }
 //        });
+    }
+
+    private void dialcall(String phone) {
+        Intent intent = new Intent(Intent.ACTION_DIAL);
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        intent.setData(Uri.parse("tel:"+phone));
+        startActivity(intent);
     }
 
 //    @Override

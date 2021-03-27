@@ -19,10 +19,12 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.UserHolder> {
 
     Context context;
     List<User> userList;
+    private ItemClickListener itemClickListener;
 
-    public UserAdapter(Context context, List<User> userList) {
+    public UserAdapter(Context context, List<User> userList, ItemClickListener itemClickListener) {
         this.context = context;
         this.userList = userList;
+        this.itemClickListener = itemClickListener;
     }
 
     @NonNull
@@ -53,6 +55,13 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.UserHolder> {
             text1 = itemView.findViewById(R.id.name);
             text2 = itemView.findViewById(R.id.email);
             text3 = itemView.findViewById(R.id.phone);
+
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    itemClickListener.OnItemClick(userList.get(getAdapterPosition()));
+                }
+            });
         }
     }
 }
