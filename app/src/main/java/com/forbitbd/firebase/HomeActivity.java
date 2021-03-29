@@ -17,7 +17,7 @@ import java.util.TimerTask;
 
 public class HomeActivity extends AppCompatActivity implements View.OnClickListener {
 
-    private MaterialCardView card7;
+    private MaterialCardView card7,card10;
     private ViewPager viewPager;
     int images[] = {R.drawable.ggg,R.drawable.one,R.drawable.three,R.drawable.two,R.drawable.four};
     int currentPageCounter = 0;
@@ -28,7 +28,9 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_home);
 
         card7 = findViewById(R.id.police);
+        card10 = findViewById(R.id.news);
         card7.setOnClickListener(this);
+        card10.setOnClickListener(this);
 
         viewPager = findViewById(R.id.slideview);
         TabLayout tabLayout = (TabLayout) findViewById(R.id.tabDots);
@@ -59,6 +61,9 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
         int id = v.getId();
         if (id == R.id.police){
             Intent intent = new Intent(HomeActivity.this,PoliceActivity.class);
+            startActivity(intent);
+        }else if (id == R.id.news){
+            Intent intent = new Intent(HomeActivity.this,NewsActivity.class);
             startActivity(intent);
         }
     }

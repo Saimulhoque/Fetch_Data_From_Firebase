@@ -4,15 +4,13 @@ public class News {
 
     String title;
     String videourl;
-    String imgurl;
 
     public News() {
     }
 
-    public News(String title, String videourl, String imgurl) {
+    public News(String title, String videourl) {
         this.title = title;
         this.videourl = videourl;
-        this.imgurl = imgurl;
     }
 
     public String getTitle() {
@@ -31,11 +29,4 @@ public class News {
         this.videourl = videourl;
     }
 
-    public String getImgurl() {
-        return imgurl;
-    }
-
-    public void setImgurl(String imgurl) {
-        this.imgurl = imgurl;
-    }
 }
