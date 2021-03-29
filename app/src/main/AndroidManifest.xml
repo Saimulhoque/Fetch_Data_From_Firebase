@@ -12,7 +12,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Firebase">
-        <activity android:name=".NewsActivity"></activity>
+        <activity android:name=".AboutSandwipActivity"></activity>
+        <activity android:name=".TouristActivity" />
+        <activity android:name=".NewsActivity" />
         <activity android:name=".PoliceActivity" />
         <activity android:name=".HomeActivity">
             <intent-filter>

@@ -4,8 +4,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".NewsActivity"
+    android:layout_height="wrap_content"
+    tools:context=".TouristActivity"
     android:orientation="vertical">
 
     <com.google.android.material.appbar.MaterialToolbar
@@ -14,10 +14,20 @@
         android:layout_height="wrap_content"
         android:background="@color/navy_blue"/>
 
-    <androidx.recyclerview.widget.RecyclerView
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabs"
+        app:tabMode="scrollable"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/recyclerview"
-        android:layout_margin="10dp" />
+        android:layout_marginStart="3dp"
+        app:tabGravity="center"
+        app:tabTextColor="@color/white"
+        android:layout_marginEnd="3dp"
+        android:background="#832F3D88"/>
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
 
 </LinearLayout>

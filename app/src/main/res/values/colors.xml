@@ -11,4 +11,6 @@
     <color name="orange">#FF5722</color>
     <color name="purple_dark">#8B0304</color>
     <color name="lite_green">#21F629</color>
+
+    <color name="shimmer_background_color">#b1b1b1</color>
 </resources>

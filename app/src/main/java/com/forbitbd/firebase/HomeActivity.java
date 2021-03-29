@@ -17,7 +17,7 @@ import java.util.TimerTask;
 
 public class HomeActivity extends AppCompatActivity implements View.OnClickListener {
 
-    private MaterialCardView card7,card10;
+    private MaterialCardView card1,card7,card9, card10;
     private ViewPager viewPager;
     int images[] = {R.drawable.ggg,R.drawable.one,R.drawable.three,R.drawable.two,R.drawable.four};
     int currentPageCounter = 0;
@@ -27,9 +27,14 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
+        card1 = findViewById(R.id.aboutsandwip);
         card7 = findViewById(R.id.police);
+        card9 = findViewById(R.id.tourist);
         card10 = findViewById(R.id.news);
+
+        card1.setOnClickListener(this);
         card7.setOnClickListener(this);
+        card9.setOnClickListener(this);
         card10.setOnClickListener(this);
 
         viewPager = findViewById(R.id.slideview);
@@ -64,6 +69,12 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
             startActivity(intent);
         }else if (id == R.id.news){
             Intent intent = new Intent(HomeActivity.this,NewsActivity.class);
+            startActivity(intent);
+        }else if (id == R.id.tourist){
+            Intent intent = new Intent(HomeActivity.this,TouristActivity.class);
+            startActivity(intent);
+        }else if (id == R.id.aboutsandwip){
+            Intent intent = new Intent(HomeActivity.this,AboutSandwipActivity.class);
             startActivity(intent);
         }
     }

@@ -12,9 +12,7 @@ import android.view.ViewGroup;
 
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
-import com.forbitbd.firebase.adapter.NewsAdapter;
 import com.forbitbd.firebase.model.News;
-import com.forbitbd.firebase.model.Police;
 import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.ArrayList;
@@ -28,6 +26,7 @@ public class NewsActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_news);
+
 
         recyclerView = findViewById(R.id.recyclerview);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this, RecyclerView.VERTICAL, false);

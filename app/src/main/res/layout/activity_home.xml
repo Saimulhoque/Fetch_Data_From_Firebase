@@ -330,7 +330,7 @@
                 </com.google.android.material.card.MaterialCardView>
 
                 <com.google.android.material.card.MaterialCardView
-                    android:id="@+id/place"
+                    android:id="@+id/tourist"
                     style="@style/CatCardStyle">
 
                     <LinearLayout
@@ -353,7 +353,7 @@
                             android:layout_gravity="center"
                             android:layout_weight="2"
                             android:gravity="center"
-                            android:text="দর্শনীয় স্থান"
+                            android:text="ভ্রমন নির্দেশনা"
                             android:textColor="@color/black" />
 
                     </LinearLayout>
