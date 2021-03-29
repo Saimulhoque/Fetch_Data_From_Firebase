@@ -1,6 +1,7 @@
 package com.forbitbd.firebase;
 
-public interface ItemClickListener {
-void OnItemClick(User user);
+import com.forbitbd.firebase.model.Police;
 
+public interface ItemClickListener {
+    void OnItemClick(Police police);
 }

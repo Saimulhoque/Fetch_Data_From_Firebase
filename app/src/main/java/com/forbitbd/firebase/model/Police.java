@@ -1,16 +1,16 @@
-package com.forbitbd.firebase;
+package com.forbitbd.firebase.model;
 
-public class User {
+public class Police {
     String name;
-    String email;
+    String designation;
     String phone;
 
-    public User() {
+    public Police() {
     }
 
-    public User(String name, String email, String phone) {
+    public Police(String name, String designation, String phone) {
         this.name = name;
-        this.email = email;
+        this.designation = designation;
         this.phone = phone;
     }
 
@@ -22,12 +22,12 @@ public class User {
         this.name = name;
     }
 
-    public String getEmail() {
-        return email;
+    public String getDesignation() {
+        return designation;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
+    public void setDesignation(String designation) {
+        this.designation = designation;
     }
 
     public String getPhone() {
